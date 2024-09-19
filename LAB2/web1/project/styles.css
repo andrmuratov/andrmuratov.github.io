@@ -1,0 +1,115 @@
+body {
+    background-image: url('https://avatars.mds.yandex.net/i?id=c54e2078a79c25979c94236a028f0e04_l-4965167-images-thumbs&n=13');
+    background-size: cover;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.flex-box_container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.page-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    border-top: 2px solid #ccc;
+}
+
+.footer__inner {
+    color: #2c3e50;
+}
+
+h1, h2, p {
+    color: #2c3e50;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #2c3e50;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-of-type(2) td:first-child {
+    background-color: white;
+}
+
+form {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db;
+}
