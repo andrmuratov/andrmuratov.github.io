@@ -1,0 +1,167 @@
+/* Общие стили */
+body {
+    background-image: url('https://avatars.mds.yandex.net/i?id=c54e2078a79c25979c94236a028f0e04_l-4965167-images-thumbs&n=13');
+    background-size: cover;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-box_container {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.page-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    border-top: 2px solid #ccc;
+}
+
+.footer__inner {
+    color: #2c3e50;
+}
+
+h1, h2, p {
+    color: #2c3e50;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #2c3e50;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-of-type(2) td:first-child {
+    background-color: white;
+}
+
+form {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+#list {
+    background-color: #e0f7e0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#table {
+    background-color: #ffe0e0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#form {
+    background-color: #e0f0ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Mobile First */
+/* Flexbox для управления порядком элементов */
+.flex-box_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#table {
+    order: -1;
+}
+
+.header, .footer, .page-nav ul, .flex-box_container {
+    width: 100%;
+}
+
+/* Вертикальное меню на смартфонах */
+.page-nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для экранов шире 768px */
+@media screen and (min-width: 768px) {
+    .page-nav ul {
+        flex-direction: row;
+    }
+
+    #table {
+        order: 0;
+    }
+}
