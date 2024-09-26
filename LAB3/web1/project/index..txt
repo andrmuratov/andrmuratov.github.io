@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,6 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.5"> <!-- Уменьшен масштаб -->
     <title>web_1 Muratov Andrey 22/1</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center; /* Весь текст по центру */
+        }
+        .header {
+            background-color: white; /* Белый фон для шапки */
+            padding: 10px; /* Отступы для шапки */
+            margin-bottom: 10px; /* Отступ снизу от шапки */
+            border-radius: 5px; /* Скругление углов */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .logo {
+            margin-right: 10px; /* Отступ справа от логотипа */
+        }
+        h1 {
+            margin: 0; /* Убираем отступы для заголовка */
+        }
+        .page-nav {
+            background-color: white; /* Белый фон для навигации */
+            padding: 10px; /* Отступы для лучшего восприятия */
+            margin: 10px; /* Отступы между окнами */
+            border-radius: 5px; /* Скругление углов */
+            display: flex;
+            justify-content: center; /* Центрируем элементы навигации */
+        }
+        .page-nav ul {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 4; /* Убираем отступы списка */
+            display: flex; /* Располагаем элементы горизонтально */
+            gap: 70px; /* Расстояние между ссылками */
+        }
+        .page-nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+        }
+        .page-nav ul li a:hover {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
