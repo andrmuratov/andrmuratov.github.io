@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    text-align: center; /* Весь текст по центру */
+    text-align: center; 
 }
 
 .header {
@@ -69,7 +69,7 @@ h1 {
 }
 
 #table {
-    order: -1; /* Для отображения таблицы выше списка ссылок на мобильных */
+    order: -1; 
 }
 
 table {
