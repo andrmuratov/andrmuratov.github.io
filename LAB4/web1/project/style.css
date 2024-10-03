@@ -165,10 +165,10 @@ input[type="submit"]:hover {
     }
 
     table {
-        font-size: 0.8em; /* Уменьшен размер текста для меньших экранов */
+        font-size: 0.8em; 
     }
 
     th, td {
-        padding: 8px; /* Уменьшены отступы для ячеек */
+        padding: 8px; 
     }
 }
