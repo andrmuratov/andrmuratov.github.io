@@ -1,29 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайтик.ру</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <img class="logo" src="https://i08.fotocdn.net/s208/de440619d3da819a/public_pin_m/2552454175.jpg" alt="Логотип сайта">
-        <h1>Сайтик.ру</h1>
+    <header class="header bg-white p-3 mb-3 rounded d-flex align-items-center">
+        <img class="logo mr-3" src="https://i08.fotocdn.net/s208/de440619d3da819a/public_pin_m/2552454175.jpg" alt="Логотип сайта" width="50" height="50">
+        <h1 class="m-0">Сайтик.ру</h1>
     </header>
 
-    <nav class="page-nav">
-        <ul>
-            <li><a href="#list">Маркированный список гиперссылок</a></li>
-            <li><a href="#table">Таблица</a></li>
-            <li><a href="#form">Форма</a></li>
+    <nav class="page-nav mb-3">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#list">Маркированный список гиперссылок</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#table">Таблица</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#form">Форма</a>
+            </li>
         </ul>
     </nav>
-    <div class="flex-box_container">
-        <section id="table">
+
+    <div class="container">
+        <section id="table" class="mb-4">
             <h2>Таблица</h2>
-            <table>
+            <table class="table table-bordered">
                 <tr>
                     <th>Колонка 1</th>
                     <th>Колонка 2</th>
@@ -80,9 +89,9 @@
             </table>
         </section>
 
-        <section id="list">
+        <section id="list" class="mb-4">
             <h2>Маркированный список гиперссылок</h2>
-            <ul class="link">
+            <ul class="list-unstyled">
                 <li><a href="http://kubsu.ru/index.html" target="_blank">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
                 <li><a href="https://kubsu.ru/index.html" target="_blank">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
                 <li>
@@ -134,10 +143,9 @@
             </ul>
         </section>
 
-        
-        <section id="form">
+        <section id="form" class="mb-4">
             <h2>Форма</h2>
-            <form id="forma">
+            <form id="forma" action="#" method="POST">
                 <div>
                     <input type="text" name="name" placeholder="Введите ваше ФИО" size="35">
                 </div>
@@ -195,10 +203,12 @@
         </section>
     </div>
 
-    <footer class="footer">
-        <p>© 2024 Muratov Andrey. Все права защищены.</p>
+    <footer class="footer bg-white text-center p-3">
+        <p>&copy; 2024 Сайтик.ру. Все права защищены.</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

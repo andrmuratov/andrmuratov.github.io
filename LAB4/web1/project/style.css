@@ -1,7 +1,5 @@
-/* Общие стили */
 body {
-    background-image: url('https://avatars.mds.yandex.net/i?id=c54e2078a79c25979c94236a028f0e04_l-4965167-images-thumbs&n=13');
-    background-size: cover;
+    background-color: #E6E6FA;
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,54 +9,58 @@ body {
 }
 
 .header {
-    background-color: white;
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    margin-right: auto; /* Логотип автоматически двигается влево */
-    width: 100px;
-    height: 100px;
-    background-image: url('https://i08.fotocdn.net/s208/de440619d3da819a/public_pin_m/2552454175.jpg');
-    background-size: cover;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 h1 {
     margin: 0;
+    font-size: 1.8em;
 }
 
 .page-nav {
-    background-color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
 }
 
 .page-nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-nav ul li {
+    margin: 0 15px;
 }
 
 .page-nav ul li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2em;
     color: #333;
+    transition: color 0.3s;
 }
 
 .page-nav ul li a:hover {
-    color: blue;
+    color: #007bff;
 }
 
-/* Контейнер для Flex Box */
 .flex-box_container {
     padding: 20px;
     border-radius: 8px;
@@ -70,7 +72,6 @@ h1 {
     flex-direction: column;
 }
 
-/* Изменение порядка элементов для мобильных устройств */
 #table {
     order: -1; 
 }
@@ -86,9 +87,9 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 th {
@@ -96,24 +97,22 @@ th {
 }
 
 tr:nth-child(odd) {
-    background-color: #ffcccb;
+    background-color: #f9f9f9;
 }
 
 tr:nth-child(even) {
-    background-color: white;
+    background-color: #fff;
 }
 
-/* Стили для футера */
 footer {
     border-top: 2px solid #ccc;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.9);
     font-size: 0.9em;
     color: #333;
 }
 
-/* Стили для кнопки */
 input[type="submit"] {
     background-color: #2980b9;
     color: white;
@@ -122,13 +121,13 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 100%;
 }
 
 input[type="submit"]:hover {
     background-color: #3498db;
 }
 
-/* Медиазапросы для более крупных экранов */
 @media screen and (min-width: 768px) {
     .page-nav ul {
         flex-direction: row;
@@ -139,7 +138,7 @@ input[type="submit"]:hover {
     }
 
     table {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     th, td {
@@ -151,10 +150,9 @@ input[type="submit"]:hover {
     }
 }
 
-/* Медиазапрос для смартфонов */
 @media screen and (max-width: 767px) {
     .page-nav ul {
-        flex-direction: column; /* Вертикальный список ссылок */
+        flex-direction: column;
         gap: 20px;
     }
 
@@ -168,9 +166,5 @@ input[type="submit"]:hover {
 
     table {
         font-size: 0.9em;
-    }
-
-    input[type="submit"] {
-        width: 100%;
     }
 }
