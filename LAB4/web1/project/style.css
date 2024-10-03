@@ -129,6 +129,13 @@ input[type="submit"]:hover {
     background-color: #3498db;
 }
 
+/* Стили для изображения цветка */
+.flower-image {
+    width: 50%; /* Уменьшите ширину изображения до 50% от родительского элемента */
+    max-width: 200px; /* Ограничьте максимальную ширину */
+    height: auto; /* Сохраняйте пропорции изображения */
+}
+
 @media screen and (min-width: 768px) {
     .page-nav ul {
         flex-direction: row;
