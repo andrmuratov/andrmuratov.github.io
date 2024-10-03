@@ -1,5 +1,5 @@
 body {
-    background-color: #E6E6FA;
+    background-color: #f5f5dc;
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -68,8 +68,7 @@ h1 {
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    overflow-x: auto; /* Позволяет прокрутку контейнера */
 }
 
 #table {
@@ -80,6 +79,8 @@ table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
+    overflow-x: auto; /* Позволяет прокрутку таблицы */
+    display: block; /* Включаем блочный контекст */
 }
 
 table, th, td {
@@ -87,9 +88,9 @@ table, th, td {
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px; /* Уменьшены отступы */
     text-align: center;
-    font-size: 1em;
+    font-size: 0.9em; /* Уменьшен размер текста для мобильных устройств */
 }
 
 th {
@@ -138,11 +139,11 @@ input[type="submit"]:hover {
     }
 
     table {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Увеличен размер текста для большей читаемости */
     }
 
     th, td {
-        padding: 15px;
+        padding: 15px; /* Увеличены отступы */
     }
 
     .header {
@@ -165,6 +166,6 @@ input[type="submit"]:hover {
     }
 
     table {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Меньший размер текста для меньших экранов */
     }
 }
