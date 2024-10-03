@@ -1,0 +1,176 @@
+/* Общие стили */
+body {
+    background-image: url('https://avatars.mds.yandex.net/i?id=c54e2078a79c25979c94236a028f0e04_l-4965167-images-thumbs&n=13');
+    background-size: cover;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center; 
+}
+
+.header {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto; /* Логотип автоматически двигается влево */
+    width: 100px;
+    height: 100px;
+    background-image: url('https://i08.fotocdn.net/s208/de440619d3da819a/public_pin_m/2552454175.jpg');
+    background-size: cover;
+}
+
+h1 {
+    margin: 0;
+}
+
+.page-nav {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 70px;
+}
+
+.page-nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.page-nav ul li a:hover {
+    color: blue;
+}
+
+/* Контейнер для Flex Box */
+.flex-box_container {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Изменение порядка элементов для мобильных устройств */
+#table {
+    order: -1; 
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #2c3e50;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffcccb;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Стили для футера */
+footer {
+    border-top: 2px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Стили для кнопки */
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+/* Медиазапросы для более крупных экранов */
+@media screen and (min-width: 768px) {
+    .page-nav ul {
+        flex-direction: row;
+    }
+
+    #table {
+        order: 0;
+    }
+
+    table {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: row;
+    }
+}
+
+/* Медиазапрос для смартфонов */
+@media screen and (max-width: 767px) {
+    .page-nav ul {
+        flex-direction: column; /* Вертикальный список ссылок */
+        gap: 20px;
+    }
+
+    .flex-box_container {
+        padding: 10px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
