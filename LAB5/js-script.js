@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const quantity = document.getElementById("quantity").value;
-        const productPrice = parseInt(document.getElementById("product").value, 10);
+        const productElement = document.getElementById("product");
+        const productPrice = parseInt(productElement.value, 10);
 
         if (!isQuantityValid(quantity)) {
             result.textContent = "Введите корректное количество (целое число).";
