@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+</head>
+<body>
+    <h1>Калькулятор стоимости заказа</h1>
+
+    <form id="order-form">
+        <label for="quantity">Количество:</label>
+        <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
+
+        <label for="product">Товар:</label>
+        <select id="product" name="product">
+            <option value="150">Карандаш - 150 руб.</option>
+            <option value="350">Тетрадь - 350 руб.</option>
+            <option value="550">Рюкзак - 550 руб.</option>
+            <option value="200">Линейка - 200 руб.</option>
+            <option value="1200">Калькулятор - 1200 руб.</option>
+            <option value="450">Маркеры - 450 руб.</option>
+            <option value="650">Пенал - 650 руб.</option>
+            <option value="900">Книга - 900 руб.</option>
+            <option value="800">Ластик - 800 руб.</option>
+            <option value="2200">Таблет - 2200 руб.</option>
+            <option value="700">Флешка - 700 руб.</option>
+            <option value="300">Блокнот - 300 руб.</option>
+            <option value="1000">Мышь - 1000 руб.</option>
+            <option value="4500">Клавиатура - 4500 руб.</option>
+            <option value="1700">Колонки - 1700 руб.</option>
+            <option value="8000">Монитор - 8000 руб.</option>
+            <option value="6500">Принтер - 6500 руб.</option>
+            <option value="600">Ручка гелевая - 600 руб.</option>
+            <option value="850">Папка для бумаг - 850 руб.</option>
+            <option value="120">Ластик - 120 руб.</option>
+            <option value="180">Клей-карандаш - 180 руб.</option>
+            <option value="250">Ножницы - 250 руб.</option>
+            <option value="300">Корректор - 300 руб.</option>
+            <option value="400">Скотч - 400 руб.</option>
+            <option value="220">Бумага для заметок - 220 руб.</option>
+            <option value="1400">Степлер - 1400 руб.</option>
+            <option value="130">Кнопки канцелярские - 130 руб.</option>
+            <option value="100">Скрепки - 100 руб.</option>
+            <option value="1100">Папка на кольцах - 1100 руб.</option>
+            <option value="950">Лампа настольная - 950 руб.</option>
+            <option value="4000">Офисное кресло - 4000 руб.</option>
+            <option value="2000">Настольный вентилятор - 2000 руб.</option>
+            <option value="3500">Планшет для рисования - 3500 руб.</option>
+            <option value="500">Магнитная доска - 500 руб.</option>
+            <option value="2200">Коврик для мыши - 2200 руб.</option>
+            <option value="280">Закладки для книг - 280 руб.</option>
+            <option value="175">Резинки для денег - 175 руб.</option>
+            <option value="1350">Часы настольные - 1350 руб.</option>
+            <option value="170">Линейка металлическая - 170 руб.</option>
+            <option value="4700">Цифровой блокнот - 4700 руб.</option>
+            <option value="900">Подставка для ручек - 900 руб.</option>
+            <option value="800">Маркерная доска - 800 руб.</option>
+            <option value="450">Дырокол - 450 руб.</option>
+            <option value="700">Чайник электрический - 700 руб.</option>
+            <option value="3000">Планшет графический - 3000 руб.</option>
+            <option value="2300">Док-станция для ноутбука - 2300 руб.</option>
+            <option value="7500">Настольный компьютер - 7500 руб.</option>
+            <option value="6000">Сканер документов - 6000 руб.</option>
+            <option value="3900">Электрическая точилка для карандашей - 3900 руб.</option>
+            <option value="700">Стикеры - 700 руб.</option>
+            <option value="900">Термокружка - 900 руб.</option>
+            <option value="450">Переходник USB - 450 руб.</option>
+            <option value="1600">Кабель HDMI - 1600 руб.</option>
+            <option value="1100">Мышь беспроводная - 1100 руб.</option>
+            <option value="2600">Трекбол - 2600 руб.</option>
+            <option value="550">Зарядное устройство для телефона - 550 руб.</option>
+            <option value="2900">Беспроводные колонки - 2900 руб.</option>
+            <option value="1150">Сумка для ноутбука - 1150 руб.</option>
+            <option value="3400">USB-хаб на 7 портов - 3400 руб.</option>
+            <option value="8000">Планшет для чтения книг - 8000 руб.</option>
+            <option value="9500">Проектор - 9500 руб.</option>
+            <option value="180">Антибактериальные салфетки - 180 руб.</option>
+            <option value="1350">Подушка для стула - 1350 руб.</option>
+            <option value="2200">Коврик для кресла - 2200 руб.</option>
+            <option value="4200">Увлажнитель воздуха - 4200 руб.</option>
+            <option value="2750">Блок питания для ноутбука - 2750 руб.</option>
+            <option value="350">Файлы для документов - 350 руб.</option>
+            <option value="1250">Зарядное устройство для ноутбука - 1250 руб.</option>
+            <option value="2700">Внешний жесткий диск - 2700 руб.</option>
+            <option value="290">Рюкзак для ноутбука - 290 руб.</option>
+            <option value="500">Подставка - 500 руб.</option>
+            <option value="1300">Наушники - 1300 руб.</option>
+            <option value="3000">Чехол для ноутбука - 3000 руб.</option>
+        </select>
+
+        <button id="calculate-button" type="submit">Подсчитать стоимость</button>
+    </form>
+
+    <div id="result">Итоговая стоимость: 0 руб.</div>
+
+    <script src="js-match.js"></script>
+    <script src="js-script.js"></script>
+</body>
+</html>
