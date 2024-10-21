@@ -1,0 +1,23 @@
+/* Стили для слайдера */
+.slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стили для стрелок слайдера */
+.slick-prev, .slick-next {
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/* Стили для точек пейджера */
+.slick-dots li button:before {
+    color: black;
+}
