@@ -1,19 +1,21 @@
-$(document).ready(function(){
-    $('.slider').slick({
-        dots: true,                 
-        infinite: true,         
-        slidesToShow: 3,         
-        slidesToScroll: 1,        
-        prevArrow: '<button type="button" class="slick-prev">←</button>',
-        nextArrow: '<button type="button" class="slick-next">→</button>',
+/*global $ */
+
+$(document).ready(function () {
+    $(".slider").slick({
+        dots: true,
+        infinite: true,
+        nextArrow: "<button type=\"button\" class=\"slick-next\">→</button>",
+        prevArrow: "<button type=\"button\" class=\"slick-prev\">←</button>",
         responsive: [
             {
-                breakpoint: 768,   
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,  
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    slidesToShow: 1
                 }
             }
-        ]
+        ],
+        slidesToScroll: 1,
+        slidesToShow: 3
     });
 });
