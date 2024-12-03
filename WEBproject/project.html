@@ -900,30 +900,55 @@
                             <div></div>
                           </div>
                           Отправляя заявку, я даю согласие на
-                          <a href=""> обработку своих персональных данных.* </a>
-                        </label>
-    <div class="g-recaptcha" data-sitekey="6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></div>
+<form action="/submit" method="POST">
+  <!-- Ссылка для обработки персональных данных -->
+  <label>
+    <a href="#">Обработка своих персональных данных.*</a>
+  </label>
 
-    <!-- Кнопка отправки формы -->
-    <div class="butt">
-      <button type="submit">СВЯЖИТЕСЬ С НАМИ</button>
-    </div>
-  </form>
+  <!-- Google reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></div>
 
-  <!-- Подключение новой версии Google reCAPTCHA Enterprise -->
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></script>
+  <!-- Кнопка отправки формы -->
+  <div class="butt">
+    <button type="submit" id="submit-btn">СВЯЖИТЕСЬ С НАМИ</button>
+  </div>
+</form>
 
-  <!-- Скрипт для обработки reCAPTCHA -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      grecaptcha.enterprise.ready(() => {
-        grecaptcha.enterprise.execute('6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ', { action: 'submit' }).then(token => {
-          // Здесь можно передать токен на сервер
-          console.log('reCAPTCHA Token:', token);
-        });
+<!-- Подключение новой версии Google reCAPTCHA Enterprise -->
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></script>
+
+<!-- Скрипт для обработки reCAPTCHA -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Инициализация Google reCAPTCHA после загрузки страницы
+    grecaptcha.enterprise.ready(() => {
+      grecaptcha.enterprise.execute('6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ', { action: 'submit' }).then(token => {
+        // Добавление токена в скрытое поле формы для отправки на сервер
+        const form = document.querySelector('form');
+        const hiddenTokenField = document.createElement('input');
+        hiddenTokenField.type = 'hidden';
+        hiddenTokenField.name = 'recaptcha-token'; // Имя поля
+        hiddenTokenField.value = token; // Значение токена
+        form.appendChild(hiddenTokenField);
       });
     });
-  </script>
+  });
+
+  // Обработчик кнопки отправки формы
+  document.getElementById('submit-btn').addEventListener('click', (e) => {
+    e.preventDefault(); // Предотвращаем обычную отправку формы
+
+    // Проверка наличия токена reCAPTCHA перед отправкой
+    const tokenField = document.querySelector('input[name="recaptcha-token"]');
+    if (tokenField && tokenField.value) {
+      // Если токен существует, отправляем форму
+      document.querySelector('form').submit();
+    } else {
+      alert('Пожалуйста, пройдите проверку reCAPTCHA');
+    }
+  });
+</script>
 
                 </div>
               </div>
