@@ -902,13 +902,29 @@
                           Отправляя заявку, я даю согласие на
                           <a href=""> обработку своих персональных данных.* </a>
                         </label>
-                      </div>
-                      <div class="g-recaptcha" data-sitekey="6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></div>
-                      <div class="butt">
-                        <button type="submit">СВЯЖИТЕСЬ С НАМИ</button>
-                      </div>
-                    </div>
-                  </form>
+    <div class="g-recaptcha" data-sitekey="6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></div>
+
+    <!-- Кнопка отправки формы -->
+    <div class="butt">
+      <button type="submit">СВЯЖИТЕСЬ С НАМИ</button>
+    </div>
+  </form>
+
+  <!-- Подключение новой версии Google reCAPTCHA Enterprise -->
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ"></script>
+
+  <!-- Скрипт для обработки reCAPTCHA -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      grecaptcha.enterprise.ready(() => {
+        grecaptcha.enterprise.execute('6LfJoJAqAAAAAITbRppA4HY2uD2ma_Bn5hUtvCUQ', { action: 'submit' }).then(token => {
+          // Здесь можно передать токен на сервер
+          console.log('reCAPTCHA Token:', token);
+        });
+      });
+    });
+  </script>
+
                 </div>
               </div>
             </div>
